@@ -35,18 +35,18 @@ const arrayOfPeople= [
     {
         "name":{"first": "Pulkit", "last": "Dubey"}, 
         "age" : 26,
-       " gender": "M"
+       "gender": "male"
     },
 
     {
         "name": {"first": "Shubham", "last": "Mishra"} ,
         "age": 20,
-       " gender":"M"
+       "gender":"male"
     },
     {
         "name":"Iu",
         "age":21,
-       " gender":"F"
+       "gender":"female"
     },
     {
         "name": {"first": "John", "last": "Doe"}, 
@@ -62,7 +62,21 @@ const arrayOfPeople= [
     }   
 ];
 
+let sizeOfArray = arrayOfPeople.length;
 
 // ? i have to print the first name of the person who
 // ? is male
 
+function logMaleFirstNames(arrayOfPeople){
+    for(let i=0; i<sizeOfArray; i++){
+        if(arrayOfPeople[i].gender=='male'){
+            let firstName = arrayOfPeople[i].name.first;
+            console.log(arrayOfPeople[i].name.first);
+        }
+        else{
+            console.log("its a Female");
+        }
+    }
+}
+
+logMaleFirstNames(arrayOfPeople);
